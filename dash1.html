@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="dash1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="navbar">
+   <div class="brand">
+    <a href="#">MyBrand</a>
+    <button class="toggle-sidebar" id="toggle-sidebar">☰</button>
+   </div>
+    <button class="toggle-menu" id="toggle-menu">☰</button>
+    <button class="toggle-theme" id="toggle-theme">☀️</button>
+    <nav class="nav-links" id="nav-links">
+        <ul>
+           
+            <li> <a href="">Home</a></li>
+            <li> <a href="">Dashboard</a></li>
+            <li> <a href="">Profile</a></li>
+            <li> <a href="">Logout</a></li>
+        </ul>
+       </nav>
+    </header>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </aside>
+  
+       <!-- Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- Greeting Section -->
+      <section class="greeting" id="greeting">
+        <h1>Welcome, <span id="user-name">User</span>!</h1>
+      </section>
+
+      <!-- Statistic Cards -->
+      <section class="stats-cards">
+        <div class="card">Total Users: <span id="total-users">0</span></div>
+        <div class="card">Active Users: <span id="active-users">0</span></div>
+        <div class="card">Revenue: $<span id="revenue">0.00</span></div>
+        <div class="card">New Signups: <span id="new-signups">0</span></div>
+      </section>
+
+      <!-- Chart Section -->
+      <section class="charts">
+        <h2>Analytics</h2>
+        <canvas id="monthly-chart"></canvas>
+      </section>
+
+      <!-- Data Table -->
+      <section class="data-table">
+        <h2>Data Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="id">ID</th>
+              <th data-sort="name">Name</th>
+              <th data-sort="status">Status</th>
+              <th data-sort="role">Role</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body">
+            <!-- Rows will be inserted dynamically -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+
+  <script src="dash1.js"></script>   
+</body>
+</html>
